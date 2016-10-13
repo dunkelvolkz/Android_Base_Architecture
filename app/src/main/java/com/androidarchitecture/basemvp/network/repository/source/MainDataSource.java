@@ -1,8 +1,8 @@
-package com.androidarchitecture.basemvp.domain.repository.source;
+package com.androidarchitecture.basemvp.network.repository.source;
 
 import android.support.annotation.NonNull;
 
-import com.androidarchitecture.basemvp.domain.model.MainModel;
+import com.androidarchitecture.basemvp.network.model.MainResponse;
 
 import java.util.List;
 
@@ -13,14 +13,14 @@ public interface MainDataSource {
 
     interface LoadMainCallback {
 
-        void onMainModelLoaded(List<MainModel> tasks);
+        void onMainModelLoaded(List<MainResponse> tasks);
 
         void onDataNotAvailable();
     }
 
     interface GetMainModelCallback {
 
-        void onMainModelLoaded(MainModel mainModel);
+        void onMainModelLoaded(MainResponse mainModel);
 
         void onDataNotAvailable();
     }
@@ -29,7 +29,7 @@ public interface MainDataSource {
 
     void getMainModel(@NonNull String id, @NonNull GetMainModelCallback callback);
 
-    void saveMainModel(@NonNull MainModel mainModel);
+    void saveMainModel(@NonNull MainResponse mainModel);
 
     void refreshMainModel();
 

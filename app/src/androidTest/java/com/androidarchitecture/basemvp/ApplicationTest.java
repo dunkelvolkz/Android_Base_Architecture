@@ -1,4 +1,4 @@
-package com.artkodec.basesimplemvp;
+package com.androidarchitecture.basemvp;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

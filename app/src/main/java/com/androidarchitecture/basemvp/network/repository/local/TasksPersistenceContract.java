@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.androidarchitecture.basemvp.domain.repository.local;
+package com.androidarchitecture.basemvp.network.repository.local;
 
 import android.provider.BaseColumns;
 

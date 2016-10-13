@@ -10,7 +10,7 @@ import android.view.inputmethod.InputMethodManager;
 /**
  * Created by manu on 14/06/16.
  */
-public class BaseFragment extends Fragment {
+public abstract class BaseFragment extends Fragment {
 
     private boolean loading= false;
 

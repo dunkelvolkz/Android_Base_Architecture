@@ -11,14 +11,14 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.artkodec.basesimplemvp.R;
+import com.androidarchitecture.basemvp.R;
 
 import butterknife.ButterKnife;
 
 /**
  *Base Actividad de la cual se va a exteder las otras actividades de la app
  */
-public class BaseActivity extends AppCompatActivity {
+public abstract  class BaseActivity extends AppCompatActivity {
 
     protected void injectView()
     {

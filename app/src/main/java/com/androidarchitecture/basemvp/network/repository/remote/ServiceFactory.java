@@ -1,4 +1,4 @@
-package com.androidarchitecture.basemvp.domain.repository.remote;
+package com.androidarchitecture.basemvp.network.repository.remote;
 
 
 import okhttp3.OkHttpClient;
@@ -8,9 +8,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 /**
  * Service Factory for Retrofit
  */
-public class ServiceGeneratorSimple {
+public class ServiceFactory {
 
-    public static final String API_BASE_URL =  WS.BASE;
+    public static final String API_BASE_URL =  ApiConstants.BASE;
 
     private static OkHttpClient httpClient = new OkHttpClient();
     private static Retrofit.Builder builder =

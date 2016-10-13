@@ -1,4 +1,4 @@
-package com.artkodec.basesimplemvp;
+package com.androidarchitecture.basemvp;
 
 import org.junit.Test;
 

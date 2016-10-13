@@ -1,4 +1,4 @@
-package com.androidarchitecture.basemvp.util;
+package com.androidarchitecture.basemvp.network.repository.local;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -8,6 +8,10 @@ import android.content.SharedPreferences;
  * Session data in-memory
  */
 public class AuthLocalData {
+
+
+
+
     public static final String PREFERENCE_NAME = "NamePreference";
     public static int PRIVATE_MODE = 0;
 

@@ -3,10 +3,10 @@ package com.androidarchitecture.basemvp;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
-import com.androidarchitecture.basemvp.domain.repository.source.MainDataSource;
+import com.androidarchitecture.basemvp.network.repository.source.MainDataSource;
 import com.androidarchitecture.basemvp.data.FakeTasksRemoteDataSource;
-import com.androidarchitecture.basemvp.domain.repository.MainModelRepository;
-import com.androidarchitecture.basemvp.domain.repository.local.TasksLocalDataSource;
+import com.androidarchitecture.basemvp.network.repository.MainModelRepository;
+import com.androidarchitecture.basemvp.network.repository.local.TasksLocalDataSource;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 /**

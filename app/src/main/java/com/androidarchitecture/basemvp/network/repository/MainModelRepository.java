@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.androidarchitecture.basemvp.domain.repository;
+package com.androidarchitecture.basemvp.network.repository;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-import com.androidarchitecture.basemvp.domain.model.MainModel;
-import com.androidarchitecture.basemvp.domain.repository.source.MainDataSource;
+import com.androidarchitecture.basemvp.network.model.MainResponse;
+import com.androidarchitecture.basemvp.network.repository.source.MainDataSource;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -47,7 +47,7 @@ public class MainModelRepository implements MainDataSource {
     /**
      * This variable has package local visibility so it can be accessed from tests.
      */
-    Map<String, MainModel> mCachedTasks;
+    Map<String, MainResponse> mCachedTasks;
 
     /**
      * Marks the cache as invalid, to force an update the next time data is requested. This variable
@@ -82,7 +82,7 @@ public class MainModelRepository implements MainDataSource {
     private void getTasksFromRemoteDataSource(@NonNull final LoadMainCallback callback) {
         mainRemoteDataSource.getMainModel(new LoadMainCallback() {
             @Override
-            public void onMainModelLoaded(List<MainModel> tasks) {
+            public void onMainModelLoaded(List<MainResponse> tasks) {
                 refreshCache(tasks);
                 refreshLocalDataSource(tasks);
                 callback.onMainModelLoaded(new ArrayList<>(mCachedTasks.values()));
@@ -95,26 +95,26 @@ public class MainModelRepository implements MainDataSource {
         });
     }
 
-    private void refreshCache(List<MainModel> models) {
+    private void refreshCache(List<MainResponse> models) {
         if (mCachedTasks == null) {
             mCachedTasks = new LinkedHashMap<>();
         }
         mCachedTasks.clear();
-        for (MainModel model : models) {
+        for (MainResponse model : models) {
             mCachedTasks.put(model.getId(), model);
         }
         mCacheIsDirty = false;
     }
 
-    private void refreshLocalDataSource(List<MainModel> models) {
+    private void refreshLocalDataSource(List<MainResponse> models) {
         mainLocalDotaSource.deleteAllMainModel();
-        for (MainModel model : models) {
+        for (MainResponse model : models) {
             mainLocalDotaSource.saveMainModel(model);
         }
     }
 
     @Nullable
-    private MainModel getMainWithId(@NonNull String id) {
+    private MainResponse getMainWithId(@NonNull String id) {
         checkNotNull(id);
         if (mCachedTasks == null || mCachedTasks.isEmpty()) {
             return null;
@@ -134,7 +134,7 @@ public class MainModelRepository implements MainDataSource {
     }
 
     @Override
-    public void saveMainModel(@NonNull MainModel mainModel) {
+    public void saveMainModel(@NonNull MainResponse mainModel) {
 
     }
 

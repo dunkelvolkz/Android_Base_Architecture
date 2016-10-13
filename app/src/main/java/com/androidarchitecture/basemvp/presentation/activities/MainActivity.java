@@ -1,12 +1,11 @@
 package com.androidarchitecture.basemvp.presentation.activities;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 
 import com.androidarchitecture.basemvp.presentation.fragments.MainFragment;
 import com.androidarchitecture.basemvp.Injection;
-import com.artkodec.basesimplemvp.R;
+import com.androidarchitecture.basemvp.R;
 import com.androidarchitecture.basemvp.base.BaseActivity;
 import com.androidarchitecture.basemvp.presentation.presenters.MainPresenter;
 import com.androidarchitecture.basemvp.util.ActivityUtils;

@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.androidarchitecture.basemvp.base.BaseFragment;
-import com.artkodec.basesimplemvp.R;
+import com.androidarchitecture.basemvp.R;
 import com.androidarchitecture.basemvp.presentation.contracts.MainContract;
 
 import butterknife.ButterKnife;

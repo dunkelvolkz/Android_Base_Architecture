@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 
 
-import com.artkodec.basesimplemvp.R;
+import com.androidarchitecture.basemvp.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

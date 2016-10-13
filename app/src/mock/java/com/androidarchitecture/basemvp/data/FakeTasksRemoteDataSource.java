@@ -2,8 +2,8 @@ package com.androidarchitecture.basemvp.data;
 
 import android.support.annotation.NonNull;
 
-import com.androidarchitecture.basemvp.domain.model.MainModel;
-import com.androidarchitecture.basemvp.domain.repository.source.MainDataSource;
+import com.androidarchitecture.basemvp.network.model.MainResponse;
+import com.androidarchitecture.basemvp.network.repository.source.MainDataSource;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -112,7 +112,7 @@ public class FakeTasksRemoteDataSource implements MainDataSource {
     }
 
     @Override
-    public void saveMainModel(@NonNull MainModel mainModel) {
+    public void saveMainModel(@NonNull MainResponse mainModel) {
 
     }
 

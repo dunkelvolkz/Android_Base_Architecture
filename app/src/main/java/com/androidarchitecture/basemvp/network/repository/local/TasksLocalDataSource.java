@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.androidarchitecture.basemvp.domain.repository.local;
+package com.androidarchitecture.basemvp.network.repository.local;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
 
-import com.androidarchitecture.basemvp.domain.model.MainModel;
-import com.androidarchitecture.basemvp.domain.repository.source.MainDataSource;
+import com.androidarchitecture.basemvp.network.model.MainResponse;
+import com.androidarchitecture.basemvp.network.repository.source.MainDataSource;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
@@ -58,7 +58,7 @@ public class TasksLocalDataSource implements MainDataSource {
     }
 
     @Override
-    public void saveMainModel(@NonNull MainModel mainModel) {
+    public void saveMainModel(@NonNull MainResponse mainModel) {
 
     }
 

@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-import com.artkodec.basesimplemvp.R;
+import com.androidarchitecture.basemvp.R;
 
 import java.util.List;
 
