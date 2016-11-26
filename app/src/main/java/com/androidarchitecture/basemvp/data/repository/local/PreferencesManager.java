@@ -1,4 +1,4 @@
-package com.androidarchitecture.basemvp.network.repository.local;
+package com.androidarchitecture.basemvp.data.repository.local;
 
 import android.content.Context;
 import android.content.SharedPreferences;

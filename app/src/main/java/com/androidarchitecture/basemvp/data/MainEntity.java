@@ -1,4 +1,4 @@
-package com.androidarchitecture.basemvp.domain;
+package com.androidarchitecture.basemvp.data;
 
 import java.io.Serializable;
 

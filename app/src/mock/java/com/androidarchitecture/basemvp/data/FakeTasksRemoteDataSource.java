@@ -2,8 +2,8 @@ package com.androidarchitecture.basemvp.data;
 
 import android.support.annotation.NonNull;
 
-import com.androidarchitecture.basemvp.network.model.MainResponse;
-import com.androidarchitecture.basemvp.network.repository.source.MainDataSource;
+import com.androidarchitecture.basemvp.data.model.MainResponse;
+import com.androidarchitecture.basemvp.data.repository.source.MainDataSource;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

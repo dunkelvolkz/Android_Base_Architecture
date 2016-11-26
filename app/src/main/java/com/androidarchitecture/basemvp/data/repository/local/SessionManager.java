@@ -1,4 +1,4 @@
-package com.androidarchitecture.basemvp.network.repository.local;
+package com.androidarchitecture.basemvp.data.repository.local;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -7,7 +7,7 @@ import android.content.SharedPreferences;
 /**
  * Session data in-memory
  */
-public class AuthLocalData {
+public class SessionManager {
 
 
 
@@ -29,7 +29,7 @@ public class AuthLocalData {
     private SharedPreferences.Editor editor;
     private Context context;
 
-    public AuthLocalData(Context context) {
+    public SessionManager(Context context) {
         this.context = context;
         preferences = this.context.getSharedPreferences(PREFERENCE_NAME, PRIVATE_MODE);
         editor = preferences.edit();

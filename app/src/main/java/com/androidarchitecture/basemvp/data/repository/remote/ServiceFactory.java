@@ -1,4 +1,4 @@
-package com.androidarchitecture.basemvp.network.repository.remote;
+package com.androidarchitecture.basemvp.data.repository.remote;
 
 
 import okhttp3.OkHttpClient;

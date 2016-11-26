@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.androidarchitecture.basemvp.network.repository;
+package com.androidarchitecture.basemvp.data.repository;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-import com.androidarchitecture.basemvp.network.model.MainResponse;
-import com.androidarchitecture.basemvp.network.repository.source.MainDataSource;
+import com.androidarchitecture.basemvp.data.model.MainResponse;
+import com.androidarchitecture.basemvp.data.repository.source.MainDataSource;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;

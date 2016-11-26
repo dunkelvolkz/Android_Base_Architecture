@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.androidarchitecture.basemvp.network.repository.local;
+package com.androidarchitecture.basemvp.data.repository.local;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
 
-import com.androidarchitecture.basemvp.network.model.MainResponse;
-import com.androidarchitecture.basemvp.network.repository.source.MainDataSource;
+import com.androidarchitecture.basemvp.data.model.MainResponse;
+import com.androidarchitecture.basemvp.data.repository.source.MainDataSource;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 

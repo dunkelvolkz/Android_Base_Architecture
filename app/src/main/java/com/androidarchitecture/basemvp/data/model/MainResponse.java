@@ -1,8 +1,7 @@
-package com.androidarchitecture.basemvp.network.model;
+package com.androidarchitecture.basemvp.data.model;
 
-import com.androidarchitecture.basemvp.domain.MainEntity;
+import com.androidarchitecture.basemvp.data.MainEntity;
 
-import java.io.Serializable;
 import java.util.List;
 
 /**

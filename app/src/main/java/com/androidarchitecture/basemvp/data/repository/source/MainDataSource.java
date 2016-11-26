@@ -1,8 +1,8 @@
-package com.androidarchitecture.basemvp.network.repository.source;
+package com.androidarchitecture.basemvp.data.repository.source;
 
 import android.support.annotation.NonNull;
 
-import com.androidarchitecture.basemvp.network.model.MainResponse;
+import com.androidarchitecture.basemvp.data.model.MainResponse;
 
 import java.util.List;
 

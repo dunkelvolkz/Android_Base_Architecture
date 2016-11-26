@@ -4,7 +4,7 @@ package com.androidarchitecture.basemvp.presentation.presenters;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-import com.androidarchitecture.basemvp.network.repository.MainModelRepository;
+import com.androidarchitecture.basemvp.data.repository.MainModelRepository;
 import com.androidarchitecture.basemvp.presentation.contracts.MainContract;
 import com.androidarchitecture.basemvp.presentation.fragments.MainFragment;
 
