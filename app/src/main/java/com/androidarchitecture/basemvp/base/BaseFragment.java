@@ -1,10 +1,12 @@
 package com.androidarchitecture.basemvp.base;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
 /**
@@ -12,29 +14,35 @@ import android.view.inputmethod.InputMethodManager;
  */
 public abstract class BaseFragment extends Fragment {
 
-    private boolean loading= false;
+    private boolean loading = false;
 
     protected void nextActivity(Activity context, Bundle bundle, Class<?> activity, boolean destroy) {
-        Intent intent= new Intent(context,activity);
-        if(bundle!=null){intent.putExtras(bundle);}
+        Intent intent = new Intent(context, activity);
+        if (bundle != null) {
+            intent.putExtras(bundle);
+        }
         startActivity(intent);
-        if(destroy)context.finish();
+        if (destroy) context.finish();
     }
 
     protected void newActivityClearPreview(Activity context, Bundle bundle, Class<?> activity) {
-        Intent intent= new Intent(context,activity);
+        Intent intent = new Intent(context, activity);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        if(bundle!=null){intent.putExtras(bundle);}
+        if (bundle != null) {
+            intent.putExtras(bundle);
+        }
         startActivity(intent);
         context.finish();
     }
 
     protected void nextActivityNewTask(Activity context, Bundle bundle, Class<?> activity, boolean destroy) {
-        Intent intent= new Intent(context,activity);
+        Intent intent = new Intent(context, activity);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        if(bundle!=null){intent.putExtras(bundle);}
+        if (bundle != null) {
+            intent.putExtras(bundle);
+        }
         startActivity(intent);
-        if(destroy)context.finish();
+        if (destroy) context.finish();
     }
 
 
@@ -46,7 +54,7 @@ public abstract class BaseFragment extends Fragment {
         this.loading = loading;
     }
 
-    protected void initView(){
+    protected void initView() {
 
     }
 
@@ -58,8 +66,29 @@ public abstract class BaseFragment extends Fragment {
         }
     }
 
-    public void hideKeyboard(){
-        InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(getActivity().INPUT_METHOD_SERVICE);
+    public void hideKeyboard() {
+        InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(getContext().INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), 0);
+    }
+
+
+    public boolean isOpenKeyboard() {
+        InputMethodManager imm = (InputMethodManager) getActivity()
+                .getSystemService(Context.INPUT_METHOD_SERVICE);
+
+        if (imm.isAcceptingText()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public void visibleLayoutToogle(boolean active, View view) {
+        if (active) {
+            view.setVisibility(View.VISIBLE);
+        } else {
+            view.setVisibility(View.GONE);
+        }
+
     }
 }
